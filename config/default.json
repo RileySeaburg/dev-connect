@@ -1,3 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://footbllman62:spike2@contacts-keeper-4topm.mongodb.net/test?retryWrites=true&w=majority"
+    "mongoURI": "mongodb+srv://footbllman62:spike2@contacts-keeper-4topm.mongodb.net/test?retryWrites=true&w=majority",
+    "jwtSecret": "secret"
 }
