@@ -1,4 +1,4 @@
 {
-    "mongoURI": "mongodb+srv://footbllman62:spike2@contacts-keeper-4topm.mongodb.net/test?retryWrites=true&w=majority",
+    "mongoURI": "mongodb://localhost:27017/dev-connect?readPreference=primary",
     "jwtSecret": "secret"
 }
