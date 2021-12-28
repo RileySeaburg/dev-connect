@@ -10,9 +10,6 @@ const { check, validationResult } = require("express-validator");
 // @desc    Authorize user with JSON token
 // @access  Public
 router.get("/", auth, async (req, res) => {
-  const badPassword = res
-    .status(400)
-    .json({ errors: [{ msg: "Invalid credentials" }] });
   try {
     const user = await User.findById(req.user.id).select("-password");
     res.json(user);
@@ -72,8 +69,6 @@ router.post(
       console.log(error.message);
       res.status(500).send("Server Error");
     }
-
-    res.send("User Logged In! Wooooooooo");
   }
 );
 
