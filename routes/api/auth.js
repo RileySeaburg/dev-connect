@@ -14,9 +14,7 @@ router.get("/", auth, async (req, res) => {
     .status(400)
     .json({ errors: [{ msg: "Invalid credentials" }] });
   try {
-    const user = await (await User.findById(req.user.id)).isSelected(
-      "-password"
-    );
+    const user = await User.findById(req.user.id).select("-password");
     res.json(user);
   } catch (error) {
     console.log(error.message);
@@ -75,7 +73,7 @@ router.post(
       res.status(500).send("Server Error");
     }
 
-    res.send("User Logged In!");
+    res.send("User Logged In! Wooooooooo");
   }
 );
 
